@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://huovf53881ys"]
+
+[ext_resource type="Script" uid="uid://bsg6hdn13b5qh" path="res://src/player.gd" id="1_gmfve"]
+[ext_resource type="Texture2D" uid="uid://cr3ammlmq0o5w" path="res://assets/first draft spaceship/First draft_spaceship.png" id="1_lowyb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehvfd"]
+atlas = ExtResource("1_lowyb")
+region = Rect2(0, 0, 350, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmfve"]
+atlas = ExtResource("1_lowyb")
+region = Rect2(350, 0, 350, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg28d"]
+atlas = ExtResource("1_lowyb")
+region = Rect2(700, 0, 350, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_21lrq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehvfd")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmfve")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg28d")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(0, -0.99999994)
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_gmfve")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_21lrq")
+animation = &"up"

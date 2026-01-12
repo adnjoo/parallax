@@ -1,19 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqow47bch5ocs"]
+[gd_scene load_steps=9 format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="Script" uid="uid://bbpi4pb60lhsc" path="res://src/camera_2d.gd" id="1_rlaii"]
 [ext_resource type="Texture2D" uid="uid://dd6dsaumb6o0r" path="res://assets/parallax/city night/parallaxcitywater.png" id="2_5mrjc"]
 [ext_resource type="Texture2D" uid="uid://cshs6f6n8osa6" path="res://assets/parallax/city night/parallaxcitysky.png" id="3_kf8lf"]
 [ext_resource type="Texture2D" uid="uid://rluo5vnj26hu" path="res://assets/parallax/city night/parallaxcitybackgroundmountain2.png" id="4_mgm53"]
 [ext_resource type="Texture2D" uid="uid://bd3clvg6hemjw" path="res://assets/parallax/city night/parallaxcitybackgroundmountain.png" id="5_uewes"]
 [ext_resource type="Texture2D" uid="uid://bcm5j48gugomg" path="res://assets/parallax/city night/parallaxcitybuildings.png" id="6_kqbth"]
 [ext_resource type="Texture2D" uid="uid://dwmb3maysg8li" path="res://assets/parallax/city night/parallaxcitywaterreflexion.png" id="7_srxbw"]
+[ext_resource type="Texture2D" uid="uid://bn147yv25kr4m" path="res://assets/parallax/city night/parallaxcityfront.png" id="8_5mrjc"]
+[ext_resource type="PackedScene" uid="uid://huovf53881ys" path="res://src/player.tscn" id="9_kf8lf"]
 
 [node name="Background" type="Node2D"]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(421, 45)
-zoom = Vector2(1.2, 1.2)
-script = ExtResource("1_rlaii")
 
 [node name="Parallax2DBackground" type="Parallax2D" parent="."]
 repeat_size = Vector2(3800, 0)
@@ -40,7 +36,6 @@ repeat_times = 3
 texture = ExtResource("4_mgm53")
 
 [node name="Parallax2DMountain2" type="Parallax2D" parent="."]
-visible = false
 scroll_scale = Vector2(0.25, 1)
 scroll_offset = Vector2(1, 0)
 repeat_size = Vector2(3800, 0)
@@ -50,7 +45,7 @@ repeat_times = 3
 texture = ExtResource("5_uewes")
 
 [node name="Parallax2DCity" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.3, 1)
+scroll_scale = Vector2(0.6, 1)
 scroll_offset = Vector2(1, 0)
 repeat_size = Vector2(3800, 0)
 repeat_times = 3
@@ -59,7 +54,7 @@ repeat_times = 3
 texture = ExtResource("6_kqbth")
 
 [node name="Parallax2DCityReflection" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.3, 1)
+scroll_scale = Vector2(0.6, 1)
 scroll_offset = Vector2(1, 0)
 repeat_size = Vector2(3800, 0)
 repeat_times = 3
@@ -67,3 +62,21 @@ repeat_times = 3
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2DCityReflection"]
 position = Vector2(1, 0)
 texture = ExtResource("7_srxbw")
+
+[node name="Parallax2DFront" type="Parallax2D" parent="."]
+scroll_scale = Vector2(2, 1)
+scroll_offset = Vector2(1, 0)
+repeat_size = Vector2(3800, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2DFront"]
+position = Vector2(1, 0)
+texture = ExtResource("8_5mrjc")
+
+[node name="Player" parent="." instance=ExtResource("9_kf8lf")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(400, 0)
+zoom = Vector2(1.1, 1.1)
+limit_top = -600
+limit_bottom = 600

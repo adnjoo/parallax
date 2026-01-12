@@ -16,7 +16,7 @@ zoom = Vector2(1.2, 1.2)
 script = ExtResource("6_7mycd")
 
 [node name="Parallax2DBackground" type="Parallax2D" parent="."]
-repeat_size = Vector2(1200, 0)
+repeat_size = Vector2(3800, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2DBackground"]
@@ -24,7 +24,7 @@ texture = ExtResource("2_0xm2m")
 
 [node name="Parallax2DSky" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.1, 1)
-repeat_size = Vector2(1200, 0)
+repeat_size = Vector2(3800, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2DSky"]
@@ -33,7 +33,7 @@ texture = ExtResource("3_h2yge")
 [node name="Parallax2DMountain1" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.2, 1)
 scroll_offset = Vector2(1, 0)
-repeat_size = Vector2(1200, 0)
+repeat_size = Vector2(3800, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2DMountain1"]
@@ -43,7 +43,7 @@ texture = ExtResource("4_lquwl")
 visible = false
 scroll_scale = Vector2(0.25, 1)
 scroll_offset = Vector2(1, 0)
-repeat_size = Vector2(1200, 0)
+repeat_size = Vector2(3800, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2DMountain2"]
@@ -52,7 +52,7 @@ texture = ExtResource("4_1bvp3")
 [node name="Parallax2DCity" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.3, 1)
 scroll_offset = Vector2(1, 0)
-repeat_size = Vector2(1200, 0)
+repeat_size = Vector2(3800, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2DCity"]
@@ -61,7 +61,7 @@ texture = ExtResource("6_272bh")
 [node name="Parallax2DCityReflection" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.3, 1)
 scroll_offset = Vector2(1, 0)
-repeat_size = Vector2(1200, 0)
+repeat_size = Vector2(3800, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2DCityReflection"]

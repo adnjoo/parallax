@@ -1,7 +1,7 @@
 extends Camera2D
 
-@export var speed: float = 500.0
+@export var speed: float = 200.0  # Adjust this to control scroll speed
 
 func _process(delta: float):
-	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	position += direction * speed * delta
+	# Vector2.RIGHT is shorthand for Vector2(1, 0)
+	position += Vector2.RIGHT * speed * delta

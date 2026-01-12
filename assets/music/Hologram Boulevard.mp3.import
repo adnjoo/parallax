@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxw50wriks1of"
+path="res://.godot/imported/Hologram Boulevard.mp3-f3cfa0808645c1e19b344c0cddcda6e4.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Hologram Boulevard.mp3"
+dest_files=["res://.godot/imported/Hologram Boulevard.mp3-f3cfa0808645c1e19b344c0cddcda6e4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
